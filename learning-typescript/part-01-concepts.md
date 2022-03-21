@@ -100,3 +100,23 @@ Above is a code snippet of doing anontation. However, typescript knows how to in
 ```tsx
 let rocker: string = "stuff"; // unnessecssary type annotation
 ```
+
+### Chapter 3. Unions and Narrowing
+
+**Unions:** Expanding a value’s allowed type to be two or more possible types 
+
+- Typescript does this by using `I`
+- `let thinker: boolena | string = false`
+- Order does not matter
+- function that exists for both/all the types will be allowed to be called
+
+**Narrowing:** Reducing a value’s allowed type to not be one or more possible types 
+
+- Done by doing checks/ or direct assignment; TypeScript will understand that while the variable may later receive a value of any of the union typed values
+- One of the simplest ways to get TypeScript to narrow a variable’s value without assigning the value yourself is to do a if statement check, like
+
+```tsx
+if (typeof scientist === "string"){
+	// Do sth
+}
+```
